@@ -62,23 +62,5 @@ collections:
 # ================================
 # End of config.yml
 # ================================
-```yml
-backend:
-  name: github
-  repo: Dao168/tazi   # ⚠️ เปลี่ยนให้ตรง repo ของคุณ
-  branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
-
-collections:
-  - name: "posts"
-    label: "ข่าว / บทความ"
-    folder: "content/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "หัวข้อ", name: "title", widget: "string" }
-      - { label: "วันที่", name: "date", widget: "datetime" }
-      - { label: "รูปปก", name: "thumbnail", widget: "image", required: false }
-      - { label: "เนื้อหา", name: "body", widget: "markdown" }
+    
