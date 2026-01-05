@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Content Manager</title>
+
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+</head>
+<body>
+
+<script>
+  window.CMS_MANUAL_INIT = true;
+
+  CMS.init({
+    config: {
+      backend: {
+        name: "github",
+        repo: "Dao168/tazi",
+        branch: "main",
+        auth_type: "oauth",
+        client_id: "Ov23livMHojmfq5ONcax"
+      },
+      media_folder: "assets/uploads",
+      public_folder: "/assets/uploads",
+      collections: [
+        {
+          name: "posts",
+          label: "Posts",
+          folder: "posts",
+          create: true,
+          slug: "{{slug}}",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Body", name: "body", widget: "markdown" }
+          ]
+        }
+      ]
+    }
+  });
+</script>
+
+</body>
+</html>
